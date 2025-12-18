@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.14.1 on win32)" generated="2025-12-18T18:12:23.164382" rpa="false" schemaversion="5">
+<suite id="s1" name="Auto-Api" source="C:\Users\ruanalmeida\Desktop\auto-api">
+<suite id="s1-s1" name="Api" source="C:\Users\ruanalmeida\Desktop\auto-api\api">
+<suite id="s1-s1-s1" name="Get-One" source="C:\Users\ruanalmeida\Desktop\auto-api\api\get-one.robot">
+<test id="s1-s1-s1-t1" name="Get de um produto" line="6">
+<kw name="Pegar um produto" owner="keyword">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-12-18T18:12:23.653598" level="INFO">Creating Session using : alias=api, url=https://fakestoreapi.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>api</arg>
+<arg>${API}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-12-18T18:12:23.652976" elapsed="0.002458"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2025-12-18T18:12:24.765822" level="INFO">GET Request : url=https://fakestoreapi.com/products/11 
+ path_url=/products/11 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2025-12-18T18:12:24.766824" level="INFO">GET Response : url=https://fakestoreapi.com/products/11 
+ status=200, reason=OK 
+ headers={'Date': 'Thu, 18 Dec 2025 21:12:24 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'access-control-allow-origin': '*', 'etag': 'W/"2c4-rr8OVjBrSZvBZzHgDrCGgWeP19k"', 'x-powered-by': 'Express', 'cf-cache-status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=vgujV%2FCCs0xgylipsAFGFkRv56WIVwuBrFbVcZmHbyGUggUgix1%2Fxzp%2FiA4InQmlUXhy9K0ZMoQgHXBki6e7tBEGh7fsIfX3WRgNczMKYXA%3D"}]}', 'Content-Encoding': 'zstd', 'Server': 'cloudflare', 'CF-RAY': '9b01a87afba1fe12-GRU', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body={"id":11,"title":"Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5","price":109,"description":"3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking &amp; Correction) to provide the optimized performance and enhanced reliability.","category":"electronics","image":"https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_t.png","rating":{"rate":4.8,"count":319}} 
+ </msg>
+<msg time="2025-12-18T18:12:24.767322" level="INFO">C:\Users\ruanalmeida\AppData\Local\Programs\Python\Python314\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'fakestoreapi.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-12-18T18:12:24.768483" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<var>${resp}</var>
+<arg>api</arg>
+<arg>/products/${PRODUTO_ID}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-12-18T18:12:23.655968" elapsed="1.113457"/>
+</kw>
+<status status="PASS" start="2025-12-18T18:12:23.651654" elapsed="1.118519"/>
+</kw>
+<status status="PASS" start="2025-12-18T18:12:23.639546" elapsed="1.131669"/>
+</test>
+<status status="PASS" start="2025-12-18T18:12:23.236811" elapsed="1.578979"/>
+</suite>
+<status status="PASS" start="2025-12-18T18:12:23.227597" elapsed="1.644537"/>
+</suite>
+<status status="PASS" start="2025-12-18T18:12:23.174388" elapsed="1.711481"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Auto-Api" id="s1" pass="1" fail="0" skip="0">Auto-Api</stat>
+<stat name="Api" id="s1-s1" pass="1" fail="0" skip="0">Auto-Api.Api</stat>
+<stat name="Get-One" id="s1-s1-s1" pass="1" fail="0" skip="0">Auto-Api.Api.Get-One</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
